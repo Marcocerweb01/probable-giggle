@@ -12,18 +12,18 @@ const RootLayout = ( {children} ) => {
     <html lang="it">
         <body>
             <Provider>
-                <Suspense>
+                
             <div className="main">
                 <div className="gradient" />
             </div>
 
             <main className="App">
                 <Nav />
-                
+                <Suspense>
                     {children}
-                
+                    </Suspense>
                 </main>
-                </Suspense>
+                
             </Provider>
         </body>
     </html>
