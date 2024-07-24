@@ -6,7 +6,7 @@ import {useState, useEffect} from 'react';
 import {signIn, signOut, useSession, getProviders} from 'next-auth/react';
 import React from 'react'
 
-const nav = () => {
+const Nav = () => {
     const {data:session}= useSession();
     const [providers, setProviders] = useState(null);
     const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -117,4 +117,4 @@ const nav = () => {
   )
 }
 
-export default nav
+export default Nav

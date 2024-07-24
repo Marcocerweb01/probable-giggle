@@ -1,7 +1,6 @@
 import '@styles/globals.css';
 import Nav from '@components/nav'
-import Provider from '@components/provider'
-import { Suspense } from 'react';
+import Provider from '@components/Provider'
 
 export const metadata ={
     title:"Urbiness",
@@ -19,9 +18,9 @@ const RootLayout = ( {children} ) => {
 
             <main className="App">
                 <Nav />
-                <Suspense>
-                {children}
-                </Suspense>
+                
+                    {children}
+                
                 </main>
             </Provider>
         </body>
