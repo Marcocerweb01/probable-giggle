@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import Form from "@components/Form";
@@ -30,7 +30,7 @@ const EditPrompt = () => {
         if (promptId) getPromptDetails();
     }, [promptId]);
  
-    const UpdatePrompt = async (e) => {
+    const updatePrompt = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         if (!promptId) return alert ("Prompt id non trovato")
@@ -56,13 +56,15 @@ const EditPrompt = () => {
 
 
   return (
+    <Suspense>
     <Form
       type='Edit'
       post={post}
       setPost={setPost}
       submitting={submitting}
-      handleSubmit={UpdatePrompt}
+      handleSubmit={updatePrompt}
     />
+    </Suspense>
   );
 };
 
