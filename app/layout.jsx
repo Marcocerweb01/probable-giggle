@@ -19,7 +19,7 @@ const RootLayout = ( {children} ) => {
 
             <main className="App">
                 <Nav />
-                <Suspense>
+                    <Suspense>
                     {children}
                     </Suspense>
                 </main>
