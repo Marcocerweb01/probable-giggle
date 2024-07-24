@@ -41,13 +41,13 @@ const MyProfile = () => {
     }
   return (
     <Suspense>
-    <Profile
+      <Profile
         name="My"
         desc="pagina personale"
         data={posts}
         handleEdit={handleEdit}
         handleDelete={handleDelete}   
-    />
+      />
     </Suspense>
   )
 }
