@@ -40,7 +40,7 @@ const MyProfile = () => {
         }
     }
   return (
- 
+    <Suspense>
     <Profile
         name="My"
         desc="pagina personale"
@@ -48,7 +48,7 @@ const MyProfile = () => {
         handleEdit={handleEdit}
         handleDelete={handleDelete}   
     />
-    
+    </Suspense>
   )
 }
 
