@@ -9,11 +9,12 @@ const nextConfig = {
     images: {
       domains: ['lh3.googleusercontent.com'],
     },
-    webpack(config) {
+    webpack: (config) => {
       config.experiments = {
-        ...config.experiments,
+        ...config.experiments,    
         topLevelAwait: true,
-      }
+      },
+      config.resolve.alias['@components'] = path.resolve(__dirname, 'components');
       return config
     },
   
