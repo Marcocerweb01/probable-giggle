@@ -2,8 +2,9 @@
 const nextConfig = {
     experimental: {
       // appDir: true,
+      missingSuspenseWithCSRBailout:false,
       serverComponentsExternalPackages: ["mongoose"],
-
+      
     },
     images: {
       domains: ['lh3.googleusercontent.com'],
@@ -15,7 +16,7 @@ const nextConfig = {
       }
       return config
     },
-
+  
   
     
   }
