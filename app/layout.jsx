@@ -1,7 +1,7 @@
 import '@styles/globals.css';
 import Nav from '@components/nav'
 import Provider from '@components/Provider'
-
+import { Suspense } from 'react';
 export const metadata ={
     title:"Urbiness",
     description:"La città del business"
@@ -12,6 +12,7 @@ const RootLayout = ( {children} ) => {
     <html lang="it">
         <body>
             <Provider>
+            <Suspense>
             <div className="main">
                 <div className="gradient" />
             </div>
@@ -22,6 +23,7 @@ const RootLayout = ( {children} ) => {
                     {children}
                 
                 </main>
+                </Suspense>
             </Provider>
         </body>
     </html>
