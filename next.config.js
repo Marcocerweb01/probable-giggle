@@ -1,24 +1,19 @@
-const path = require('path');
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    // appDir: true,
-    missingSuspenseWithCSRBailout: false,
+    appDir: true,
     serverComponentsExternalPackages: ["mongoose"],
   },
   images: {
     domains: ['lh3.googleusercontent.com'],
   },
-  webpack: (config) => {
+  webpack(config) {
     config.experiments = {
       ...config.experiments,
       topLevelAwait: true,
-    };
-    config.resolve.alias['@components'] = path.resolve(__dirname, 'components');
-    return config;
-  },
-};
+    }
+    return config
+  }
+}
 
-module.exports = nextConfig;
-
+module.exports = nextConfig
