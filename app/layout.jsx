@@ -1,6 +1,6 @@
 import '@styles/globals.css';
 import Nav from '@components/nav'
-import Provider from '@components/Provider'
+import Provider from '@components/provider'
 import { Suspense } from 'react';
 export const metadata ={
     title:"Urbiness",
